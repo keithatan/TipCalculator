@@ -55,7 +55,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1EE-Jg-sMo">
-                                <rect key="frame" x="81" y="553" width="38" height="21"/>
+                                <rect key="frame" x="81" y="553" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -70,7 +70,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="OCg-Ge-y21"/>
                     <connections>
+                        <outlet property="checkTotal" destination="Rmz-jf-DZ0" id="Qlv-8q-dzQ"/>
                         <outlet property="tipLabel" destination="25p-a9-Bpg" id="WnI-d5-F0r"/>
+                        <outlet property="tipPercentage" destination="yrA-a9-xbU" id="1xR-od-nEc"/>
                         <outlet property="total" destination="1EE-Jg-sMo" id="408-km-CaB"/>
                     </connections>
                 </viewController>

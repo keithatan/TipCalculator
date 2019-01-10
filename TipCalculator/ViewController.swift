@@ -11,7 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var checkTotal: UITextField!
     
+    @IBOutlet weak var tipPercentage: UISegmentedControl!
     @IBOutlet weak var total: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculate(_ sender: Any) {
-        tipLabel.text = "HAHA"
+        let check = Double(checkTotal.text!) ?? 0
+        let tipPercent = [0.15, 0.18, 0.2, 0.25]
+        
+        let tipNum = check * tipPercent[tipPercentage.selectedSegmentIndex]
+        let totalNum = check + tipNum
+        tipLabel.text = String(format: "$%.2f", tipNum)
+        total.text = String(format: "$%.2f", totalNum)
     }
 }
 
