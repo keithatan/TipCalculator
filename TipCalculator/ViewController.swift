@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var checkTotal: UITextField!
+    @IBOutlet weak var groupCount: UISegmentedControl!
     
     @IBOutlet weak var tipPercentage: UISegmentedControl!
     @IBOutlet weak var total: UILabel!
@@ -29,8 +30,9 @@ class ViewController: UIViewController {
         let tipPercent = [0.15, 0.18, 0.2, 0.25]
         
         let tipNum = check * tipPercent[tipPercentage.selectedSegmentIndex]
+        let dividedTip = Double(tipNum)/Double(groupCount.selectedSegmentIndex + 1)
         let totalNum = check + tipNum
-        tipLabel.text = String(format: "$%.2f", tipNum)
+        tipLabel.text = String(format: "$%.2f", dividedTip)
         total.text = String(format: "$%.2f", totalNum)
     }
 }
